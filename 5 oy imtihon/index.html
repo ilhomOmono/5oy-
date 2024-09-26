@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    
+</head>
+<body class="bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center h-screen">
+    <div class="bg-white p-10 rounded-lg shadow-md max-w-md w-full">
+      <h2 class="text-3xl font-bold text-center mb-4">Admin Students</h2>
+      <p class="text-center mb-8">Enter your credentials to access your account</p>
+      
+     
+      <div id="login-form">
+        <input type="text" id="login-username" placeholder="Enter your login" class="w-full p-3 mb-4 border border-gray-300 rounded">
+        <input type="password" id="login-password" placeholder="Enter your password" class="w-full p-3 mb-4 border border-gray-300 rounded">
+        <button class="w-full bg-yellow-500 text-white py-3 rounded" onclick="handleLogin()">LOGIN</button>
+      </div>
+  
+      
+      <div id="signup-form" class="hidden">
+        <input type="text" id="signup-username" placeholder="Enter new login" class="w-full p-3 mb-4 border border-gray-300 rounded">
+        <input type="password" id="signup-password" placeholder="Create new password" class="w-full p-3 mb-4 border border-gray-300 rounded">
+        <button class="w-full bg-yellow-500 text-white py-3 rounded" onclick="handleSignup()">SIGN UP</button>
+      </div>
+  
+      <div class="text-center mt-4">
+        <a href="#" id="toggle-auth-mode" class="text-yellow-500">Don't have an account? Sign Up</a>
+      </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</html>

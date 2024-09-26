@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+     
+      <div class="w-1/5 bg-[#f4f0e7] p-6">
+        <div class="text-center mb-10">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Admin" class="rounded-full w-24 mx-auto mb-2" />
+          <h3 class="text-xl font-semibold">Karthi Madesh</h3>
+          <p class="text-yellow-600">Admin</p>
+        </div>
+        <nav>
+          <ul>
+            <li class="mb-4">
+              <a href="#" class="flex items-center p-3 bg-yellow-400 text-white rounded-lg">
+                <span class="mr-3">📚</span> Students
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button id="logoutBtn" class="mt-auto w-full py-2 text-gray-700 hover:text-gray-900 focus:outline-none">Logout</button>
+      </div>
+  
+      
+      <div class="w-4/5 p-8">
+        
+        <div class="flex justify-between mb-6">
+          <h1 class="text-3xl font-semibold">Students List</h1>
+          <div class="flex space-x-4">
+            <input type="text" placeholder="Search..." class="px-4 py-2 border rounded-md" id="searchInput" />
+            <button id="sortBtn" class="bg-gray-200 text-black px-4 py-2 rounded-md">Sort</button>
+            <button id="addBtn" class="bg-yellow-400 text-white px-4 py-2 rounded-md">ADD NEW STUDENT</button>
+          </div>
+        </div>
+  
+        
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white border rounded-lg shadow">
+            <thead>
+              <tr>
+                <th class="px-6 py-3 border-b">Name</th>
+                <th class="px-6 py-3 border-b">Email</th>
+                <th class="px-6 py-3 border-b">Phone</th>
+                <th class="px-6 py-3 border-b">Enroll Number</th>
+                <th class="px-6 py-3 border-b">Date of Admission</th>
+                <th class="px-6 py-3 border-b">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentTable">
+          
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+ 
+    <div id="modal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+      <div class="flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+          <h2 class="text-2xl mb-4">Add New Student</h2>
+          <input id="nameInput" type="text" placeholder="Name" class="w-full px-4 py-2 border rounded-md mb-2" />
+          <input id="emailInput" type="email" placeholder="Email" class="w-full px-4 py-2 border rounded-md mb-2" />
+          <input id="phoneInput" type="text" placeholder="Phone" class="w-full px-4 py-2 border rounded-md mb-2" />
+          <input id="enrollInput" type="text" placeholder="Enroll Number" class="w-full px-4 py-2 border rounded-md mb-2" />
+          <input id="admissionInput" type="date" class="w-full px-4 py-2 border rounded-md mb-4" />
+          <div class="flex justify-end">
+            <button id="cancelBtn" class="bg-gray-300 text-black px-4 py-2 rounded-md mr-2">Cancel</button>
+            <button id="saveBtn" class="bg-yellow-400 text-white px-4 py-2 rounded-md">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="./admin.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</html>

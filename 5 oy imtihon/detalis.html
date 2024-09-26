@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    
+</head>
+<body class="bg-gray-50">
+
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-[#f6ebe3] p-4">
+        <div class="text-center mb-6">
+          <img class="rounded-full w-20 h-20 mx-auto" src="admin_photo.jpg" alt="Admin">
+          <h2 class="mt-4 text-lg font-semibold">Karthi Madesh</h2>
+          <p class="text-sm text-gray-500">Admin</p>
+        </div>
+        <nav class="mt-4 space-y-4">
+          <a href="index.html" class="block py-2 px-4 rounded bg-yellow-400 text-white font-semibold flex items-center">
+            <span class="material-icons mr-2">group</span> Students
+          </a>
+        </nav>
+        <div class="mt-auto">
+          <button id="logoutBtn" class="block py-2 px-4 rounded text-gray-600 bg-white w-full text-left">Logout</button>
+        </div>
+      </aside>
+  
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <h1 id="studentName" class="text-2xl font-semibold"></h1>
+  
+        <div class="mt-6 bg-white p-6 rounded-lg shadow">
+          <div class="flex">
+            <img id="studentImage" src="" alt="" class="w-32 h-32 rounded-full mr-6">
+            <div>
+              <p><strong>Name:</strong> <span id="studentDetailName"></span></p>
+              <p><strong>Email:</strong> <span id="studentDetailEmail"></span></p>
+              <p><strong>Phone:</strong> <span id="studentDetailPhone"></span></p>
+              <p><strong>Date Admission:</strong> <span id="studentDetailDate"></span></p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+
+</body>
+<script src="./detalis.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</html>
